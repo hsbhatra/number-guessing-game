@@ -18,7 +18,7 @@ const GamePage = () => {
         alert('Please login to access the game.');
         navigate('/');
     }
-    }, []);
+    }, [navigate]);
 
 
   function generateRandom() {
