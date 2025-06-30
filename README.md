@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Number Guessing Game 🎲
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional and responsive number guessing game built with **ReactJS**.  
+Users can sign up, log in, play the game, track their scores, and compete against their previous best attempts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+[Play the Game on Netlify](https://boom-guess.netlify.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo Video
 
-### `npm test`
+Watch an explanatory walkthrough of the project:  
+[Google Drive – Number Guessing Game Demo](https://drive.google.com/drive/folders/1musmQxv2KO7gQ-vGHuyJrpMJrGFZnchA)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- User authentication: Login, Signup, and Forgot Password (localStorage-based)
+- Random number generation (1–100) for each game session
+- Timer to track how long you take to guess correctly
+- Tracks number of attempts per game
+- High score is saved and displayed (using localStorage)
+- Reset button to restart the game at any time
+- Logout functionality and route protection for authenticated pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- **Frontend:** ReactJS (CRA), JavaScript, CSS
+- **Storage:** LocalStorage (for user data and game history)
+- **Deployment:** GitHub & Netlify
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── pages/                # Login, Signup, Forgot Password, Game
+├── styles/               # Auth.css, GamePage.css
+├── App.js                # App router
+└── index.js              # Main entry point
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## How to Run Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/number-guessing-game.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 2. Navigate into the project directory
+cd number-guessing-game
 
-### Code Splitting
+# 3. Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 4. Start the development server
+npm start
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues, and feature requests are welcome!  
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
 
-### `npm run build` fails to minify
+For any questions or feedback, please reach out via [GitHub Issues](https://github.com/hsbhatra/number-guessing-game/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

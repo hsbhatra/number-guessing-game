@@ -5,26 +5,19 @@ import '../styles/GamePage.css';
 const GamePage = () => {
   // State to store the randomly generated target number
   const [targetNumber, setTargetNumber] = useState(generateRandom());
-
   // User's current input guess
   const [guess, setGuess] = useState('');
-
   // Feedback to show the user (Too high, Too low, Correct, etc.)
   const [feedback, setFeedback] = useState('');
-
   // Tracks how many guesses the user has made
   const [attempts, setAttempts] = useState(0);
-
   // Stores the high score from localStorage (least number of attempts)
   const [highScore, setHighScore] = useState(localStorage.getItem('highScore'));
-
   // Timer value in seconds
   const [timer, setTimer] = useState(0);
-
   // Flag to check if the game is over
   const [gameOver, setGameOver] = useState(false);
-
-  // Hook to programmatically navigate the user
+  // Hook to navigate the user
   const navigate = useNavigate();
 
   // Redirects user to login page if not authenticated
