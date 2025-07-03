@@ -1,5 +1,143 @@
-/* src/styles/GamePage.css */
+/* GamePage.css - Modern Styling */
 .game-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.game-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.game-container p {
+  margin: 1.2rem 0;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+/* Timer and score styling */
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(67, 97, 238, 0.05);
+  border-radius: var(--border-radius);
+}
+
+.game-stats p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.high-score {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Input field styling */
+.game-container input {
+  padding: 0.8rem 1.2rem;
+  width: 180px;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-align: center;
+  transition: var(--transition);
+  margin-right: 0;
+}
+
+.game-container input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  transform: scale(1.02);
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.game-container button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0.5rem;
+  transition: var(--transition);
+}
+
+.game-container button:first-of-type {
+  background: var(--primary-color);
+}
+
+.game-container button:nth-of-type(2) {
+  background: var(--accent-color);
+}
+
+.game-container button:last-of-type {
+  background: var(--warning-color);
+}
+
+/* Feedback message styling */
+.feedback-message {
+  min-height: 2.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Correct guess animation */
+@keyframes celebration {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.correct-guess {
+  background-color: rgba(76, 201, 240, 0.2);
+  color: var(--success-color);
+  animation: celebration 0.5s ease 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .game-container input {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* Uncomment the following styles if you want to keep the old App styles */
+
+/* src/styles/GamePage.css */
+/* .game-container {
   text-align: center;
   padding: 2rem;
 }
@@ -18,4 +156,4 @@ button {
 p {
   margin: 1rem 0;
   font-weight: bold;
-}
+} */

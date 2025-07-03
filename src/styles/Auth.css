@@ -1,4 +1,144 @@
+/* Auth.css - Modern Authentication Styling */
 .auth-container {
+  max-width: 420px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.auth-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.auth-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.auth-container input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  outline: none;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.auth-container button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.auth-container button:active {
+  transform: translateY(0);
+}
+
+.auth-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.auth-links p {
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+.auth-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.auth-links a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Password strength indicator (for signup) */
+.password-strength {
+  width: 100%;
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  margin-top: -10px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--warning-color);
+  transition: width 0.3s ease;
+}
+
+/* Success message styling */
+.success-message {
+  color: var(--success-color);
+  background: rgba(76, 201, 240, 0.1);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    width: 90%;
+  }
+  
+  .auth-container h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Fallback styles for older browsers */
+
+/* .auth-container {
   width: 300px;
   margin: 3rem auto;
   padding: 2rem;
@@ -16,4 +156,4 @@
 .auth-container button {
   padding: 10px 20px;
   margin-top: 10px;
-}
+} */
